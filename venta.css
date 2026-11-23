@@ -438,3 +438,42 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #8c
   font-weight: 900;
   text-decoration: underline;
 }
+
+/* Centralizações e refinamento da oferta */
+.section-head {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-head p {
+  margin-inline: auto;
+}
+
+.faq .section-head {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.offer-card-kicker {
+  text-align: center;
+}
+
+.offer-card h3 {
+  text-align: center;
+}
+
+.offer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.offer-button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
