@@ -477,3 +477,211 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #8c
   background: var(--accent-dark);
   transform: translateY(-2px);
 }
+
+/* Centralização do Preço no Card da Oferta */
+.offer-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  padding: 22px 0 18px;
+  border-top: 1px solid var(--line);
+}
+
+.offer-price span {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.offer-price strong {
+  font: 900 clamp(42px, 5vw, 54px)/1 Archivo, Arial, sans-serif;
+  color: var(--accent-dark);
+  letter-spacing: -0.05em;
+}
+
+.local-currency-notice {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 4px 0 0;
+  text-align: center;
+}
+
+/* Modal / Card Exclusivo de Retenção (Back Redirect Exit Popup) */
+#exit-popup::backdrop {
+  background-color: rgba(24, 40, 37, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#exit-popup {
+  border: 3px solid #ef4444;
+  border-radius: 20px;
+  padding: 30px 24px;
+  max-width: 480px;
+  width: 90%;
+  background: #ffffff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 9999;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.exit-popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.exit-popup-close-btn {
+  position: absolute;
+  top: -14px;
+  right: -8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.exit-popup-close-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.exit-popup-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.exit-popup-title {
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 10px 0;
+  font-family: Archivo, Arial, sans-serif;
+}
+
+.exit-popup-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #475569;
+  margin: 0 0 18px 0;
+}
+
+.exit-popup-pricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.exit-price-old {
+  text-decoration: line-through;
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.exit-price-arrow {
+  color: #94a3b8;
+  font-weight: 800;
+}
+
+.exit-price-new {
+  color: #16a34a;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.exit-popup-cta-btn {
+  display: inline-flex;
+  min-height: 52px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-align: center;
+  background: #e53935;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  padding: 14px 18px;
+  box-shadow: 0 8px 20px rgba(229, 57, 53, 0.35);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.exit-popup-cta-btn:hover {
+  background: #c62828;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(229, 57, 53, 0.45);
+}
+
+.exit-popup-decline-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: underline;
+}
+
+.exit-popup-decline-btn:hover {
+  color: #64748b;
+}
+
+@media (min-width: 640px) {
+  #exit-popup {
+    padding: 36px 30px;
+  }
+  .exit-popup-title {
+    font-size: 1.65rem;
+  }
+}

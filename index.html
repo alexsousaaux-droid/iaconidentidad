@@ -196,23 +196,29 @@ totalmente <span class="bonus-total-free">GRATIS</span> incluido en tu acceso ho
 <div class="access-box">
 <span class="eyebrow">EL MATERIAL COMPLETO</span>
 <h2>Aprende qué corregir antes de publicar tu próximo anuncio.</h2>
-<p>Identifica de inmediato el aspecto artificial, guía las correcciones con criterio y asegúrate de que la pieza final represente fielmente tu producto.</p>
+
 <div class="offer-card">
-<span class="offer-card-kicker">MATERIAL DIGITAL DESRENDER</span>
-<h3>Qué incluye tu acceso</h3>
+
+<h3>IA con Identidad + 3 BONOS</h3>
 <ul class="offer-includes">
-<li><strong>Acceso digital inmediato e ilimitado</strong> <span>Disponible las 24 horas para consultar cuando quieras.</span></li>
-<li><strong>Ejemplos prácticos de antes y después</strong> <span>Para identificar al instante qué delata a un anuncio como artificial.</span></li>
-<li><strong>Guía de corrección paso a paso</strong> <span>Ajusta iluminación, texturas, fondos y detalles reales del producto.</span></li>
-<li><strong>28 comandos editables para IA</strong> <span>Orienta la herramienta con precisión sin deformar los elementos clave.</span></li>
-<li><strong>5 desafíos y ejercicios guiados</strong> <span>Pon a prueba tus correcciones y valida tu pieza antes de pautar.</span></li>
+<li>Acceso digital inmediato e ilimitado</li>
+<li>Más de 200 referencias visuales y ejemplos de antes y después</li>
+<li>Guía completa de corrección paso a paso (luz, textura y composición)</li>
+<li>Más de 100 comandos editables para orientar la IA con precisión</li>
+<li>Desafíos prácticos guiados para entrenar tu criterio visual</li>
+<li>Garantía incondicional de 7 días</li>
+<li>Actualizaciones gratuitas incluidas</li>
 </ul>
 <ul aria-label="Bonos incluidos" class="offer-bonus-list">
 <li>🎁 <strong>Bono 1:</strong> Qué decir en el anuncio</li>
 <li>🎁 <strong>Bono 2:</strong> Cómo estructurar la pieza</li>
 <li>🎁 <strong>Bono 3:</strong> Textos con la voz de tu marca</li>
 </ul>
-<div class="offer-price"><span>Valor del material completo</span><strong>US$ 9,90</strong></div>
+<div class="offer-price">
+  <span>Valor del material completo</span>
+  <strong id="price-val">US$ 12,90</strong>
+  <p class="micro local-currency-notice">(Puedes pagar en tu moneda local)</p>
+</div>
 <a class="button offer-button" href="https://pay.hotmart.com/M108594544N?off=p2keyiw6">¡SÍ, QUIERO ACCEDER AHORA! <span>↗</span></a>
 <small id="checkout-pending">Pago 100% seguro y acceso inmediato tras confirmar la compra.</small>
 </div>
@@ -224,9 +230,52 @@ totalmente <span class="bonus-total-free">GRATIS</span> incluido en tu acceso ho
 <details><summary>¿La plataforma genera las imágenes automáticamente por mí?</summary><p>No. Este es un curso práctico enfocado en el criterio visual, la detección de errores y la corrección estratégica de piezas publicitarias. Para generar o editar imágenes, utilizarás la herramienta de IA de tu preferencia (Midjourney, DALL-E, etc.).</p></details>
 <details><summary>¿Puedo usar los comandos con cualquier tipo de producto o nicho?</summary><p>Sí. Los comandos son completamente editables. Podrás adaptar cada instrucción a tus fotos reales y comprobar que la herramienta conserve la forma, los colores, el empaque y los detalles originales de tu producto.</p></details>
 <details><summary>¿Necesito conocimientos previos en diseño gráfico?</summary><p>No necesitas experiencia previa. Las lecciones se enfocan en entrenar tu ojo con señales visuales claras y ejercicios prácticos de observación. Para montar textos y llamadas a la acción finales, puedes usar cualquier editor sencillo como Canva.</p></details>
-<details><summary>¿Cuál es el valor del acceso?</summary><p>El precio promocional presentado en esta página es de solo US$ 9,90 con acceso completo y todos los bonos incluidos.</p></details>
+<details><summary>¿Cuál es el valor del acceso?</summary><p>El precio promocional presentado en esta página es de solo US$ 12,90 (o el equivalente en tu moneda local) con acceso completo y todos los bonos incluidos.</p></details>
 </section>
 </main>
+
+  <!-- ==================================================
+    MODAL / DIALOG DE RETENCIÓN (EXIT POPUP / BACK REDIRECT)
+    ================================================== -->
+  <dialog id="exit-popup">
+    <div class="exit-popup-content">
+      <button type="button" class="exit-popup-close-btn" onclick="document.getElementById('exit-popup').close()" aria-label="Cerrar ventana">✕</button>
+
+      <!-- Badge de Alerta -->
+      <span class="exit-popup-tag">
+        ⚠️ ¡ESPERA UN MOMENTO!
+      </span>
+
+      <!-- Título Impactante -->
+      <h2 id="exitPopupTitle" class="exit-popup-title">
+        ¡NO TE VAYAS CON LAS MANOS VACÍAS!
+      </h2>
+
+      <!-- Subtítulo Explicativo -->
+      <p class="exit-popup-subtitle">
+        Antes de que salgas, queremos darte una oportunidad única: llévate el <strong>Método Completo DESRENDER + 3 Bonos Exclusivos</strong> con nuestro <strong>descuento especial de salida</strong>.
+      </p>
+
+      <!-- Caixa de Preço com Âncora -->
+      <div class="exit-popup-pricing">
+        <span class="exit-price-old" id="exit-price-old">De US$ 12,90</span>
+        <span class="exit-price-arrow">→</span>
+        <span class="exit-price-new">Por solo <strong id="exit-price-new">US$ 9,90</strong></span>
+      </div>
+
+      <!-- Botão CTA Principal -->
+      <a id="exit-popup-cta-btn" href="https://pay.hotmart.com/M108594544N?off=ydojrb61" target="_blank"
+        class="exit-popup-cta-btn" onclick="document.getElementById('exit-popup').close()">
+        ¡SÍ, QUIERO APROVECHAR EL DESCUENTO POR <span id="exit-btn-price" style="margin-left: 4px;">US$ 9,90</span>!
+      </a>
+
+      <!-- Botão de Recusa / Saída -->
+      <button type="button" class="exit-popup-decline-btn" onclick="document.getElementById('exit-popup').close()">
+        No, gracias. Prefiero salir sin aprovechar esta oferta.
+      </button>
+    </div>
+  </dialog>
+
 <footer>
 <div class="wrap footer-inner">
 <a class="brand" href="#inicio">desrender<span>.</span></a>
